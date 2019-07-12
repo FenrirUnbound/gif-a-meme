@@ -3,6 +3,7 @@ MAINTAINER Darren Matsumoto <darren@matsumoto.io>
 
 COPY ./exports /usr/src/app
 RUN cp /usr/src/app/subs_only.py /usr/local/bin/subs_only.py \
-  && cp /usr/src/app/meme /usr/local/bin/meme
+  && cp /usr/src/app/meme /usr/local/bin/meme \
+  && mkdir -p /usr/src/share
 
 ENTRYPOINT ["./entrypoint.sh"]

@@ -1,19 +1,70 @@
 subtitles:
-  - message: You can't just code a gif...
+  - message: You can't just gif a meme
     color: yellow
     start_time: 1
-    end_time: 2.5
+    end_time: 2.7
   - message: Of course I can
     color: white
-    start_time: 3
-    end_time: 4
-  - message: I'm going to code this entire gif
+    start_time: 3.5
+    end_time: 4.8
+  - message: I'll do whatever I want
     color: white
-    start_time: 4.1
-    end_time: 7
+    start_time: 5
+    end_time: 7.1
   - message: |+
-      And I'll continue the
-      trend for a bit
+      Ok fine
+      Look at this card
+    color: yellow
+    start_time: 7.5
+    end_time: 8.8
+  - message: |+
+      "Patrick Star"
+    color: yellow
+    start_time: 9
+    end_time: 10.3
+  - message: Yeah, I can read
     color: white
-    start_time: 7.1
-    end_time: 10
+    start_time: 10.5
+    end_time: 11.3
+  - message: |+
+      He's just a character
+      from a cartoon
+    color: yellow
+    start_time: 11.5
+    end_time: 13.5
+  - message: Yep
+    color: white
+    start_time: 13.5
+    end_time: 14.2
+  # - message: OK!
+  #   color: yellow
+  #   start_time: 14.3
+  #   end_time: 14.9
+  - message: |+
+      He's also part of a
+      meme with panels
+    color: yellow
+    start_time: 15
+    end_time: 17.2
+  - message: |+
+      As tradition, he needs
+      to be unanimated
+    color: yellow
+    start_time: 17.5
+    end_time: 19.2
+  - message: Right?
+    color: yellow
+    start_time: 19.6
+    end_time: 21
+  - message: That makes sense to me
+    color: white
+    start_time: 21.5
+    end_time: 23
+  - message: So stop doing it
+    color: yellow
+    start_time: 23.5
+    end_time: 24.7
+  - message: No way
+    color: white
+    start_time: 24.9
+    end_time: 26

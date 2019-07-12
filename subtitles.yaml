@@ -1,0 +1,19 @@
+subtitles:
+  - message: You can't just code a gif...
+    color: yellow
+    start_time: 1
+    end_time: 2.5
+  - message: Of course I can
+    color: white
+    start_time: 3
+    end_time: 4
+  - message: I'm going to code this entire gif
+    color: white
+    start_time: 4.1
+    end_time: 7
+  - message: |+
+      And I'll continue the
+      trend for a bit
+    color: white
+    start_time: 7.1
+    end_time: 10

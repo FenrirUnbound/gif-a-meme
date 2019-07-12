@@ -1,0 +1,21 @@
+FROM jrottenberg/ffmpeg:4.1-alpine
+
+# python-related install
+RUN apk --no-cache add \
+    python3 \
+    python3-dev \
+    g++ \
+  && python3 -m ensurepip  \
+  && rm -r /usr/lib/python*/ensurepip \
+  && pip3 install --no-cache --upgrade pip
+
+# 3rd-party tooling
+RUN apk --no-cache add \
+    py3-pillow \
+  && pip3 install numpy youtube_dl
+
+# completely optional
+WORKDIR /usr/src/app
+
+# /bin/sh so we can execute whatever command we tell it to
+ENTRYPOINT ["/bin/sh", "-c"]

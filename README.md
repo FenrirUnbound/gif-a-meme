@@ -22,14 +22,14 @@ These instructions will get you a copy of the project up and running on your loc
 You can choose to pull the Docker image that's already published to Docker Hub
 
 ```
-$ docker pull slikshooz/code-a-gif:latest
+$ docker pull slikshooz/gif-a-meme:latest
 ```
 
 If you prefer to build your own Docker image based on the current state of the repository, you can run the following Make commands:
 
 ```
 # In order to name the image differently
-$ export IMAGE=myUsername/my-code-a-gif:latest
+$ export IMAGE=myUsername/my-gif-a-meme:latest
 
 # creates the docker image
 $ make docker-build
@@ -47,5 +47,5 @@ Edit the `subtitles.yaml` file with your script, then run the docker image
 # resulting gif will be stored
 $ docker run --rm -ti \  
   -v /tmp/myStuff:/usr/src/share \
-  slikshooz/code-a-gif:latest
+  slikshooz/gif-a-meme:latest
 ```

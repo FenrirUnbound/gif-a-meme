@@ -9,6 +9,15 @@ class Chain(object):
 
         self.command = Command()
     
+    def add_next(self, nextOp=None):
+        self.next = nextOp
+    
+    def add_chain(self, to_add=None):
+        if self.next != None:
+            self.next.add_chain(to_add=to_add)
+        else:
+            self.next = to_add
+
     def exec(self, config={}):
         exit_code = 0
 

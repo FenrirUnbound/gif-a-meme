@@ -1,4 +1,1 @@
-meme-publish
-
-# ignore exported artifacts
-exports/subs_only.py
+*.pyc

@@ -70,7 +70,7 @@ class Subtitle(Chain):
         img = Image.new('RGBA',(video_width, video_height))
         x,y = position
         draw = ImageDraw.Draw(img)
-        font = ImageFont.truetype("Ubuntu-B.ttf",font_size)
+        font = ImageFont.truetype("fonts/Ubuntu-B.ttf",font_size)
         w, h = draw.multiline_textsize(text, font=font)
         x = x - w/2
         y = y - h/2

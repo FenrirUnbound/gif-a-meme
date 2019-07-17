@@ -29,15 +29,31 @@ class GenerateGifIt(object):
     def get_downloader(self, options={}):
         return DownloadVideo()
 
+    def get_video_options(self, options={}):
+        return VideoOptions()
+
 class DownloadVideo(Chain):
     def __init__(self, nextOp=None):
         super(DownloadVideo, self).__init__(nextOp=nextOp)
-    
+
     def _exec(self, config={}):
         cmd = 'youtube-dl'
         args = [
             '-f', config['video_quality'],
             '-o', config['source_path'],
+            config['video_url']
+        ]
+
+        return self.command.run(cmd=cmd, args=args)
+
+class VideoOptions(Chain):
+    def __init__(self, nextOp=None):
+        super(VideoOptions, self).__init__(nextOp=nextOp)
+
+    def _exec(self, config={}):
+        cmd = 'youtube-dl'
+        args = [
+            '-F',
             config['video_url']
         ]
 

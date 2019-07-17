@@ -14,7 +14,17 @@ class GenerateGifIt(object):
         return instance
     
     def __create_instance(self, options={}):
-        return DownloadVideo(nextOp=ConvertAVI(nextOp=Subtitle(nextOp=PublishGif())))
+        first = None
+
+        if not options['skip_download']:
+            first = DownloadVideo(nextOp=ConvertAVI())
+        else:
+            first = ConvertAVI()
+        
+        first.add_chain(to_add=Subtitle())
+        first.add_chain(to_add=PublishGif())
+
+        return first
 
 class DownloadVideo(Chain):
     def __init__(self, nextOp=None):

@@ -7,12 +7,16 @@ RUN apk --no-cache add \
     g++ \
   && python3 -m ensurepip  \
   && rm -r /usr/lib/python*/ensurepip \
-  && pip3 install --no-cache --upgrade pip
+  && pip3 install --no-cache --upgrade pip \
+  && mkdir -p /usr/src/deps
+
+COPY requirements.txt /usr/src/deps
 
 # 3rd-party tooling
 RUN apk --no-cache add \
     py3-pillow \
-  && pip3 install numpy youtube_dl
+  && cd /usr/src/deps \
+  && pip3 install -r requirements.txt
 
 # completely optional
 WORKDIR /usr/src/app

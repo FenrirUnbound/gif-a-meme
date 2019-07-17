@@ -1,0 +1,4 @@
+numpy
+youtube_dl
+click >= 7.0
+pyyaml

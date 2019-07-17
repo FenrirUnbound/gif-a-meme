@@ -26,6 +26,9 @@ class GenerateGifIt(object):
 
         return first
 
+    def get_downloader(self, options={}):
+        return DownloadVideo()
+
 class DownloadVideo(Chain):
     def __init__(self, nextOp=None):
         super(DownloadVideo, self).__init__(nextOp=nextOp)

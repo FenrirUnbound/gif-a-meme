@@ -1,0 +1,14 @@
+image: docker:19
+services:
+- docker:dind
+
+stages:
+- build
+
+before_script:
+- apk add make
+
+build:
+  stage: build
+  script:
+  - make docker-build

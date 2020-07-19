@@ -4,6 +4,7 @@ services:
 
 stages:
 - build
+- publish
 
 before_script:
 - apk add make
@@ -12,3 +13,13 @@ build:
   stage: build
   script:
   - make docker-build
+  except:
+  - main
+
+publish:
+  stage: publish
+  script:
+  - make docker-build
+  - make docker-push
+  only:
+  - main
